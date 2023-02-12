@@ -1,6 +1,7 @@
 package com.example.jpabasic.Order;
 
 import com.example.jpabasic.Member.Member;
+import com.example.jpabasic.config.BaseEntity;
 import com.example.jpabasic.delivery.Delivery;
 import lombok.Cleanup;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import java.util.List;
 @Table(name = "orders")
 @Getter
 @Entity
-public class Order {
+public class Order extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")

@@ -1,0 +1,8 @@
+###Book 을 저장한다
+POST http://localhost:8080/item/book
+Content-Type: application/json
+
+{
+  "isbn": "D800",
+  "author": "haley ji"
+}

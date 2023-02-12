@@ -1,5 +1,6 @@
 package com.example.jpabasic.item;
 
+import com.example.jpabasic.config.BaseEntity;
 import lombok.Getter;
 
 import javax.persistence.*;
@@ -8,7 +9,9 @@ import java.util.List;
 
 @Entity
 @Getter
-public class Item {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn
+public class Item extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "item_id")
